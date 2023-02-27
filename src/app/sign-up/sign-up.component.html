@@ -1,0 +1,152 @@
+ <div class="outer">
+  <div class="container">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" style="margin-left: 8%;">
+        <div class="panel border bg-white">
+          <div class="panel-heading">
+            <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+          </div>
+          <div class="panel-body">
+            <form style="margin-left: 15px;margin-right: 15px;margin-bottom: 20px;" [formGroup]="signupForm">
+              <div class="form-body">
+                  <div class="row">
+                    <h4 class="scheme-g">Personal Information</h4>
+                        <div class="col-md-6">
+                          <div class="form-group" >
+                             <label class="control-label">First Name</label>
+                             <input class="form-control" type="text" formControlName="first_Name" [class.error]="signupForm.controls['first_Name'].dirty && signupForm.hasError('required','first_Name')"/>
+                             </div>
+                            <small class="text-danger" *ngIf="signupForm.controls['first_Name'].dirty && signupForm.hasError('required','first_Name')">*First Name is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label class="control-label">Last Name</label>
+                              <input class="form-control" type="text" formControlName="last_Name"
+                              [class.error]="signupForm.controls['last_Name'].dirty && signupForm.hasError('required','last_Name')"/>
+
+                          </div>
+                          <small class="text-danger" *ngIf="signupForm.controls['last_Name'].dirty && signupForm.hasError('required','last_Name')">*last Name is required</small>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Your Email</label>
+                             <input class="form-control" type="text" formControlName="email"
+                             [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required','email')"/>
+                          </div>
+                          <small class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is required</small>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Your Phone</label>
+                             <input class="form-control" type="text" formControlName="phone"
+                             [class.error]="signupForm.controls['phone'].dirty && signupForm.hasError('required','phone')"/>
+                          </div>
+                          <small class="text-danger" *ngIf="signupForm.controls['phone'].dirty && signupForm.hasError('required','phone')">*Your number is required</small>
+                        </div>
+
+                        <h4 class="scheme-g">Account Information</h4>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Password</label>
+                             <input class="form-control password" [type]="type" formControlName="password"
+                             [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')"/>
+                             <span (click)="hideShowPass()" class="fa {{eyeIcon}}" id="p1"></span>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is required</small>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Confirm Password</label>
+                             <input class="form-control password" [type]="type1" formControlName="confirm_Password"
+                             [class.error]="signupForm.controls['confirm_Password'].dirty && signupForm.hasError('required','confirm_Password')"/>
+                             <span (click)="hideShowPass1()" class="fa {{eyeIcon1}}" id="p1"></span>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['confirm_Password'].dirty && signupForm.hasError('required','confirm_Password')">*Password is required</small>
+
+                        </div>
+
+
+                        <h4 class="scheme-g">Billing Address</h4>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Country</label>
+                             <input class="form-control" type="text" formControlName="country"
+                             [class.error]="signupForm.controls['country'].dirty && signupForm.hasError('required','country')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['country'].dirty && signupForm.hasError('required','country')">*country is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">City</label>
+                             <input class="form-control" type="text" formControlName="city"
+                             [class.error]="signupForm.controls['city'].dirty && signupForm.hasError('required','city')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['city'].dirty && signupForm.hasError('required','city')">*city is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Address</label>
+                             <input class="form-control" type="text" formControlName="address"
+                             [class.error]="signupForm.controls['address'].dirty && signupForm.hasError('required','address')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['address'].dirty && signupForm.hasError('required','address')">*Address is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">State</label>
+                             <input class="form-control" type="text" formControlName="state"
+                             [class.error]="signupForm.controls['state'].dirty && signupForm.hasError('required','state')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['state'].dirty && signupForm.hasError('required','state')">*State is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Zip Code</label>
+                             <input class="form-control" type="text" formControlName="zip_Code"
+                             [class.error]="signupForm.controls['zip_Code'].dirty && signupForm.hasError('required','zip_Code')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['zip_Code'].dirty && signupForm.hasError('required','zip_Code')">*zipCode is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                             <label class="control-label">Captcha Code</label>
+                             <input class="form-control" type="text" formControlName="captcha_Code"
+                             [class.error]="signupForm.controls['captcha_Code'].dirty && signupForm.hasError('required','captcha_Code')"/>
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['captcha_Code'].dirty && signupForm.hasError('required','captcha_Code')">*captchaCode is required</small>
+
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group" style="margin-top: 10px;">
+                            <input type="checkbox" value="0" name="agree" class="term_con" formControlName="check_Box">
+                            <label for="termsandcon">I accept Terms and Conditions:</label>
+
+
+                          </div>
+                          <small class="text-danger"  *ngIf="signupForm.controls['check_Box'].dirty && signupForm.hasError('required','check_Box')">*checkBox is required</small>
+
+                        </div>
+
+                        <button type="submit"class="btn btn-primary btn-block mt-4 w-50" (click)="(signup())" style="margin-left: 23%;">Sign Up</button>
+                          <div class="text-center pt-4 text-muted">Don't have account?<a id="forget" routerLink="/login" >Login</a></div>
+
+                       </div>
+              </div>
+          </form>
+
+
+          </div>
+        </div>
+
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  </div>
+
+

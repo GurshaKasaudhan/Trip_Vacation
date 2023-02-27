@@ -1,0 +1,71 @@
+
+.banner video {
+  width: 100%;
+  position: absolute;
+    overflow: hidden;
+}
+.banner-innner {
+  padding: 300px 0;
+}
+
+header{
+position:absolute;
+width:100%;
+top:0;
+z-index:11;
+}
+.banner-left {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+  position: relative;
+}
+.banner-left h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 50px;
+  text-shadow: 1px 2px #000;
+margin-bottom:15px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 12px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #fff;
+}
+@media only screen and (min-width: 200px ) and (max-width: 800px ){
+.banner-left h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  text-shadow: 1px 2px #000;
+}
+.banner{
+padding:120px 0;
+height: auto;
+}
+
+.nav-color{
+background:transparent;
+}
+.navbar-light .navbar-nav .nav-link{
+padding-left:0;
+}
+.banner-innner {
+  padding: 120px 0;
+}
+}
+
+
